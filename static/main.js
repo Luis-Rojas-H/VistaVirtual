@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     scene.add(light);
 
     //const raccoon = await loadGLTF('/static/assets/models/musicband-raccoon/scene.gltf');
-    const raccoon = await loadGLTF('/static/assets/models/musicband-raccoon/scene.gltf');
-    raccoon.scene.scale.set(2, 2, 2);
+    const raccoon = await loadGLTF('/static/assets/models/musicband-raccoon/4710010.jpg');
+    raccoon.scene.scale.set(0.8, 0.8, 1);
     raccoon.scene.position.set(0, -0.4, 0);
 
     const anchor = mindarThree.addAnchor(0);
