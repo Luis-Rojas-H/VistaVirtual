@@ -24,7 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const material = new THREE.MeshBasicMaterial({ map: texture });
     const plane = new THREE.Mesh(geometry, material);
 
-    plane.position.set(0, -0.4, 0);
+    // Ajustar la posición para que esté delante de la cámara
+    plane.position.set(0, 0, -1); // Esto lo coloca 1 unidad por delante de la cámara
+
+    // Hacer que la imagen siempre mire hacia la cámara
+    plane.lookAt(camera.position); // Hace que la imagen siempre esté orientada hacia la cámara
+
     scene.add(plane);
 
     const anchor = mindarThree.addAnchor(0);
